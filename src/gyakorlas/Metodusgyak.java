@@ -2,20 +2,45 @@ package gyakorlas;
 
 public class Metodusgyak {
 
+    static String szoveg;
+    static int a,b,c,d;
     public static void main(String[] args) {
-        String szoveg="Az első tíz szám összege: " + elso10SzamOssege();
+        feladatok();
+    }
+
+    private static void feladatok() {
+        feladat1();
+        feladat2();
+        feladat3();
+        feladat4();
+    }
+
+    private static void feladat4() {
+        a=3;
+        b=4;
+        c=2;
+        szoveg="%d+%d+%d gyöke: %.0f".formatted(a,b,c, Math.sqrt(osszead(a, osszead(b, c))));
         kiIr(szoveg);
-        
-        int a=3, b=5, c, d;
+    }
+
+    private static void feladat3() {
+        a=2;
+        b=3;
+        c=3;
+        d=5;
+        szoveg="4 szám összege: " + osszead(osszead(a, b), osszead(c, d));
+        kiIr(szoveg);
+    }
+
+    private static void feladat2() {
+        a=3;
+        b=5;
         szoveg=String.format("%d + %d = ", a, b) + osszead(a, b);
         kiIr(szoveg);
-        
-        a=2;b=3;c=3;d=5;
-        szoveg="4 szám összege: " + osszead(a, osszead(b, osszead(c, d)));
-        kiIr(szoveg);
-        
-        a=3;b=4;c=2;
-        szoveg="%d+%d+%d gyöke: %.0f".formatted(a,b,c, Math.sqrt(osszead(a, osszead(b, c))));
+    }
+
+    private static void feladat1() {
+        String szoveg = "Az első tíz szám összege: " + elso10SzamOssege();
         kiIr(szoveg);
     }
     
