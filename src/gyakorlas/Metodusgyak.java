@@ -3,8 +3,13 @@ package gyakorlas;
 public class Metodusgyak {
 
     public static void main(String[] args) {
-        kiIr("Az első tíz szám összege:", elso10SzamOssege());
-        kiIr("a + b = ", osszead(3, 9));
+        String szoveg="Az első tíz szám összege: " + elso10SzamOssege();
+        kiIr(szoveg);
+        
+        int a=3, b=5;
+        szoveg=String.format("%d + %d = ", a, b) + osszead(a, b);
+        kiIr(szoveg);
+        
     }
     
     private static int elso10SzamOssege(){
@@ -16,7 +21,7 @@ public class Metodusgyak {
     private static int osszead(int a, int b){
         return a+b;
     }
-    private static void kiIr(String szoveg, int ertek){
-        System.out.printf(szoveg + ertek + "\r\n");
+    private static void kiIr(String szoveg){
+        System.out.println(szoveg);
     }
 }
