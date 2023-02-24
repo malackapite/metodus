@@ -10,5 +10,7 @@ package gyakorlas;
  * @author Malackapite
  */
 public class QrCode {
-    
+    public static void main(String[] args) {
+        
+    }
 }
